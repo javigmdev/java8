@@ -4,7 +4,6 @@ import com.java.collections.model.Player;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,9 +39,5 @@ public class Collections_002_Stream_Basic {
                 .map(player -> player.getName())
                 .collect(Collectors.toList());
         System.out.println("Stream with a object list" + namesPlayers);
-
-
-
-
     }
 }

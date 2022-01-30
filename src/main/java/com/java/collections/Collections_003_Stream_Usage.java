@@ -5,7 +5,6 @@ import com.java.collections.model.Position;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Collections_003_Stream_Usage {
@@ -88,8 +87,6 @@ public class Collections_003_Stream_Usage {
                 .mapToInt(Player::getAge)
                 .findFirst()
                 .ifPresent(System.out::println);
-
     }
-
 
 }

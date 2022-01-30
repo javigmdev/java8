@@ -6,7 +6,6 @@ import com.java.collections.model.Position;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Collections_004_Stream_Usage_Basic {
     public static void main(String[] args) {
