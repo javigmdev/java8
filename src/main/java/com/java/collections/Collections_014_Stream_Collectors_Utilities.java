@@ -32,21 +32,24 @@ public class Collections_014_Stream_Collectors_Utilities {
                 new Player("Charlton", 88, Position.SOCCER_FAN),
                 new Player("Rowe", 96, Position.SOCCER_FAN));
 
+        System.out.println("Collectors joining: return a Collector that concatenates the input element strings into a single String");
         String names = players.stream()
                 .map(Player::getName)
                 .collect(Collectors.joining(DELIMITER));
-        System.out.println("Collectors joining: " + names);
+        System.out.println("Names with delimiter: " + names);
 
         String names2 = players.stream()
                 .map(Player::getName)
                 .collect(Collectors.joining(DELIMITER, PREFIX, SUFFIX));
-        System.out.println("Collectors joining [,]: " + names2);
+        System.out.println("Names wit delimiter, prefix and suffix [,]: " + names2);
 
+        System.out.println("Collectors count: is used to count the number of elements passed in the stream as the parameter");
         Long count = players.stream()
                 .filter(player -> player.getAge() > 80)
                 .collect(Collectors.counting());
-        System.out.println("Collectors count: " + count);
+        System.out.println("Player > 80: " + count);
 
+        System.out.println("Collectors mapping: maps/transforms/converts the stream element of type T to type U");
         List<String> upperNames = players.stream()
                 .filter(player -> player.getAge() > 80)
                 .collect(Collectors.mapping(player -> player.getName(), Collectors.toList()));
